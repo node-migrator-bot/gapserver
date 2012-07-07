@@ -22,7 +22,7 @@ var extend = function(defaults, options) {
 
 var build = "debug";
 var config = require(__dirname+"/config");
-if (path.existsSync(cwd+"/config.js")) {
+if (fs.existsSync(cwd+"/config.js")) {
   customConfig = require(cwd+"/config");
   extend(config, customConfig);
 }

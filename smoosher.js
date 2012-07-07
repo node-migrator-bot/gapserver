@@ -5,7 +5,7 @@ var path = require("path");
 var smoosher = function(configFile, env) {
   if (!configFile) configFile = "smoosh.json";
 
-  if (!path.existsSync(configFile))
+  if (!fs.existsSync(configFile))
     return;
   env = env || process.env.NODE_ENV || "development";
 
